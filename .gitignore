@@ -1,0 +1,10 @@
+/node_modules
+/dist
+/.parcel-cache
+/src/utils/Mockdata.json
+/postcss.config.js
+/README.md
+/firebase.json
+/.firebaserc
+/firebase/hosting.cHVibGlj.cache
+/.firebase
