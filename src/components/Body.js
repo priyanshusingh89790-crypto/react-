@@ -85,13 +85,14 @@ const fetchData = async () => {
 
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 ml-4 mr-4">
-        {listofRestaraunts.map((meal) => {
-          const imageIndex = Number(meal.info.id) % images.length;
+        {listofRestaraunts.map((meal, index) => {
+          
 
           const fixedData = {
             id: meal.info.id,
             name: meal.info.name,
-            image:images[imageIndex], 
+            image: Object.values(images)[index % Object.values(images).length],
+
             avgRating: meal.info.avgRating,
             cuisines: meal.info.cuisines || [],
             costForTwo: meal.info.costForTwo,
@@ -110,5 +111,5 @@ const fetchData = async () => {
     </div>
   );
 };
-
+console.log(images);
 export default Body;
